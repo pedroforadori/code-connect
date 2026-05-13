@@ -11,6 +11,7 @@
     "api:dev": "pnpm --filter api start:dev",
     "api:build": "pnpm --filter api build",
     "api:start": "pnpm --filter api start:prod",
-    "api:test": "pnpm --filter api test"
+    "api:test": "pnpm --filter api test",
+    "web:test": "pnpm --filter web test"
   }
 }
