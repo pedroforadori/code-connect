@@ -5,25 +5,35 @@ export default {
   theme: {
     extend: {
       colors: {
-        'app-bg': '#0a0d14',
-        'card': '#1f242e',
-        'input-bg': '#171b23',
-        'input-border': '#2a2f3a',
-        'divider': '#2a2f3a',
-        'brand': {
-          DEFAULT: '#84F573',
+        // Design system palette (Figma)
+        grafite: '#00090E',
+        'cinza-escuro': '#171D1F',
+        'cinza-medio': '#888888',
+        offwhite: '#E1E1E1',
+        'verde-destaque': '#81FE88',
+        'verde-petroleo': '#132E35',
+
+        // Semantic tokens
+        'app-bg': '#00090E',
+        card: '#171D1F',
+        'input-bg': '#888888',
+        'input-border': '#666666',
+        'input-text': '#171D1F',
+        divider: '#2a2f3a',
+        brand: {
+          DEFAULT: '#81FE88',
           hover: '#9bff8a',
-          ink: '#0a0d14',
+          ink: '#132E35',
         },
-        'content': {
-          primary: '#FFFFFF',
+        content: {
+          primary: '#E1E1E1',
           secondary: '#B7BDC9',
-          muted: '#7A8290',
-          link: '#84F573',
+          muted: '#888888',
+          link: '#81FE88',
         },
       },
       borderRadius: {
-        card: '24px',
+        card: '32px',
         field: '12px',
       },
       fontFamily: {

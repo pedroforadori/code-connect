@@ -48,7 +48,7 @@ export function LoginForm({ onSubmit }: LoginFormProps) {
     <form onSubmit={handleSubmit(onSubmit)} noValidate className="flex flex-col gap-5">
       <div className="space-y-1">
         <Heading>Login</Heading>
-        <Text>Boas-vindas! Faça seu login.</Text>
+        <Text className="text-2xl">Boas-vindas! Faça seu login.</Text>
       </div>
 
       <FormField id="identifier" label="Email ou usuário" error={errors.identifier?.message}>

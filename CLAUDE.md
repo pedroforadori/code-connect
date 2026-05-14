@@ -78,6 +78,42 @@ Rules:
 - Extend the design system via `tailwind.config.ts` (colors, spacing, fonts) — never hardcode raw values like `#3b82f6` in className strings.
 - Keep class lists readable: split long className strings with a `cn()` helper (e.g., `clsx` + `tailwind-merge`).
 
+### Colors
+All colors are defined in `tailwind.config.ts` and must be referenced by token — never use raw hex values in `className`.
+
+| Token | Value | Usage |
+|-------|-------|-------|
+| `bg-app-bg` | `#00090E` | Page/app background (Grafite) |
+| `bg-card` | `#171D1F` | Card surfaces (Cinza Escuro) |
+| `bg-input-bg` | `#888888` | Input field background (Cinza Médio) |
+| `text-input-text` | `#171D1F` | Text inside inputs (dark on gray bg) |
+| `border-input-border` | `#666666` | Input border (subtle on gray bg) |
+| `border-divider` | `#2a2f3a` | `<Divider>` component |
+| `bg-brand` | `#81FE88` | Primary action (button fill, focus ring) — Verde Destaque |
+| `hover:bg-brand-hover` | `#9bff8a` | Brand hover state |
+| `text-brand-ink` | `#132E35` | Text on brand backgrounds (Verde Petróleo) |
+| `text-content-primary` | `#E1E1E1` | Headings, strong emphasis (Offwhite) |
+| `text-content-secondary` | `#B7BDC9` | Secondary body text |
+| `text-content-muted` | `#888888` | Placeholders, helper text (Cinza Médio) |
+| `text-content-link` | `#81FE88` | Inline links (Verde Destaque) |
+
+Error states use Tailwind's built-in `red-500` (not a custom token).
+
+### Sizing & Spacing
+Standard sizes used across atoms — keep these consistent when building new components:
+
+| Element | Class(es) | Px equivalent |
+|---------|-----------|---------------|
+| Button / Input height | `h-12` | 48 px |
+| Button horizontal padding | `px-6` | 24 px |
+| Input horizontal padding | `px-4` | 16 px |
+| Card border-radius | `rounded-card` | 32 px |
+| Field border-radius (inputs, buttons) | `rounded-field` | 12 px |
+| Heading `h1` | `text-3xl font-bold` | 30 px / 700 |
+| Heading `h2` | `text-xl font-bold` | 20 px / 700 |
+| Card shadow | `shadow-card` | `0 30px 80px -20px rgba(0,0,0,0.6)` |
+| Font family | `font-sans` | Inter → system-ui fallback |
+
 ### Component Tests
 Every component **must** have a test file covering its essential usage. Use Vitest + React Testing Library.
 
