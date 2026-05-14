@@ -18,8 +18,8 @@ export function SocialButton({ iconSrc, label, onClick, className }: SocialButto
         className,
       )}
     >
-      <IconImage src={iconSrc} alt={label} size={28} />
-      <span className="text-xs text-content-secondary">{label}</span>
+      <IconImage src={iconSrc} alt="" size={28} className="shrink-0" />
+      <span className="text-sm text-content-primary">{label}</span>
     </button>
   )
 }
