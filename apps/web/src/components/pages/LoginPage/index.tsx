@@ -8,7 +8,7 @@ export function LoginPage() {
   }
 
   return (
-    <AuthTemplate bannerSrc="/banner.png" bannerAlt="Code Connect">
+    <AuthTemplate bannerSrc="/banner-login.png" bannerAlt="Code Connect">
       <LoginForm onSubmit={handleSubmit} />
     </AuthTemplate>
   )
